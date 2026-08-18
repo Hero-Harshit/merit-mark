@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { getCredential } from '../utils/storage';
-import { Printer, Download, ChevronLeft } from 'lucide-react';
+import { Printer, ChevronLeft } from 'lucide-react';
 import Button from '../components/Button';
 
 const Certificate = () => {

@@ -7,18 +7,15 @@ import { ChevronLeft, ChevronRight, Check } from 'lucide-react';
 
 const Assessment = () => {
   const navigate = useNavigate();
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [answers, setAnswers] = useState({});
-  const totalQuestions = htmlQuestions.length;
-
-  useEffect(() => {
-    // Load saved state if available
+  const [currentIndex, setCurrentIndex] = useState(() => {
     const savedState = getAssessmentState();
-    if (savedState) {
-      setAnswers(savedState.answers || {});
-      setCurrentIndex(savedState.currentIndex || 0);
-    }
-  }, []);
+    return savedState?.currentIndex || 0;
+  });
+  const [answers, setAnswers] = useState(() => {
+    const savedState = getAssessmentState();
+    return savedState?.answers || {};
+  });
+  const totalQuestions = htmlQuestions.length;
 
   useEffect(() => {
     // Save state on change

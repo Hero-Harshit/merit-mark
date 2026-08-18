@@ -22,7 +22,7 @@ const Navbar = () => {
         {/* Desktop Nav */}
         <nav style={styles.desktopNav}>
           <Link to="/certifications" style={styles.navLink}>Certifications</Link>
-          <a href="#how-it-works" style={styles.navLink}>How It Works</a>
+          <a href="/#how-it-works" style={styles.navLink}>How It Works</a>
           <Link to="/verify" style={styles.navLink}>Verify Certificate</Link>
         </nav>
 
@@ -77,31 +77,6 @@ const styles = {
     fontSize: '0.9rem',
     fontWeight: '500',
     transition: 'color 0.2s',
-  },
-  actions: {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '1rem',
-  },
-  menuBtn: {
-    display: 'block',
-    '@media (min-width: 768px)': {
-      display: 'none',
-    },
-  },
-  mobileNav: {
-    padding: '1rem 1.5rem',
-    background: 'var(--bg-card)',
-    borderBottom: '1px solid var(--border-subtle)',
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '1rem',
-  },
-  mobileNavLink: {
-    color: 'var(--text-main)',
-    fontSize: '1rem',
-    fontWeight: '500',
-    padding: '0.5rem 0',
   }
 };
 
